@@ -20,7 +20,7 @@ researcher() {
 }
 
 # Check that the domain argument is provided
-if [[ $# -eq 1 ]] && [[ "$1" =~ \.tech$ ]]; then
+if [[ $# -eq 1 ]] && [[ "$1" =~ \.tech$|\.online$ ]]; then
     for sub_domain in "www" "lb-01" "web-01" "web-02"; do
 	    researcher "$1" "$sub_domain" "A"
     done
